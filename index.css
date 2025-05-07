@@ -1,0 +1,302 @@
+#screen1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen {
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card1 {
+    max-width: 1450px;
+    display: flex;
+    gap: 3rem;
+    height: 100%;   
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.card2 {
+    width: 1450px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+video {
+    height: 100%;
+}
+
+.videoContain {
+    height: 100%;
+    flex: 0;
+}
+
+.titleCard {
+    display: flex;
+    flex: 1 1 0;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+img.email {
+    height: 32px !important;
+    margin-left: 3px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    margin-left: 12px;
+    align-items: center;
+}
+
+nav span {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 40;
+    cursor: pointer;
+}
+
+nav span:hover {
+    opacity: 70%;
+}
+
+nav span.seperator {
+    font-weight: 700;
+    height: 33px;
+    cursor: default;
+}
+
+nav span.seperator:hover {
+    opacity: 100;
+}
+
+.links {
+    display: flex;
+    gap: 32px;
+    margin-top: 18px;
+    margin-left: 12px;
+}
+
+.links a img {
+    height: 40px;
+}
+
+.links a:hover,
+.links a img:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+.links a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.arrow {
+    height: 15px;
+    margin-left: -1px;
+}
+
+.scroll span {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.scroll {
+    margin-left: 12px;
+    margin-top: 23px;
+    cursor: pointer;
+}
+
+.scroll:hover {
+    opacity: 70%;
+}
+
+h1 {
+    font-size: 190;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 90%;
+    margin: 0;
+    width: min-content;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Radio Canada", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    scroll-snap-type: y mandatory;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h2 {
+    font-size: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    margin: 0;
+}
+
+.compImg {
+    display: flex;
+    height: 300px;
+    justify-content: space-between;
+}
+
+.compImg img {
+    object-fit: cover;
+    width: 450px;
+}
+
+.results-flex-table {
+    display: flex;
+    gap: 32px;
+    /* Space between columns */
+    align-items: flex-start;
+}
+
+.results-flex-table .column {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    /* Space between rows in each column */
+    font-size: 25px;
+}
+
+p {
+    font-size: 20px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.competition-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.competition-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.result-entry {
+    margin-bottom: 1.2rem;
+}
+
+.result-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.result-location {
+    margin: 0;
+    color: #555;
+}
+
+.world {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+
+.competition-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.results-grid {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.result-item {
+    border-left: 4px solid #e0e0e0;
+    padding-left: 1rem;
+}
+
+.result-item.highlight {
+    border-left-color: gold;
+}
+
+.result-rank {
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: block;
+}
+
+.result-event {
+    display: block;
+    font-size: 18px;
+    margin-top: 0.2rem;
+}
+
+.result-location {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.2rem;
+}
+
+iframe {
+    max-width: 450px !important;
+    margin: 0 !important;
+}
+
+.world div p {
+    width: calc(450px - 1rem);
+    height: fit-content;
+    padding-bottom: 40px;
+}
+
+.world div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: flex-start;
+}
+
+.media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
