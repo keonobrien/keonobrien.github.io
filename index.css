@@ -30,10 +30,11 @@
 }
 
 .card2 {
-    width: 1450px;
+    max-width: 1450px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    width: 100%;
 }
 
 video {
@@ -179,7 +180,7 @@ h2 {
 
 .compImg img {
     object-fit: cover;
-    width: 450px;
+    width: 30%;
 }
 
 .results-flex-table {
@@ -277,12 +278,12 @@ p {
 }
 
 iframe {
-    max-width: 450px !important;
+    max-width: 30% !important;
     margin: 0 !important;
 }
 
 .world div p {
-    width: calc(450px - 1rem);
+    width: 100%;
     height: fit-content;
     padding-bottom: 40px;
 }
@@ -293,10 +294,41 @@ iframe {
     flex-direction: column;
     gap: 2rem;
     justify-content: flex-start;
+    flex: 1 1 0;
 }
 
 .media {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+@media (max-width: 1300px) {
+    p {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h1 {
+        font-size: 150;
+    }
+
+    .screen {
+        height: fit-content;
+    }
+
+    #screen1 {
+        height: 100%;
+    }
+
+    nav span {
+        font-size: 32px;
+    }
+
+    html {
+        scroll-snap-type: none;
+    }
 }
