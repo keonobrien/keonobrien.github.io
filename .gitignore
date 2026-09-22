@@ -1,0 +1,4 @@
+.DS_Store
+
+# Original, uncompressed footage; run tools/encode-video.sh to make the web copies
+raw/
