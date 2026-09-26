@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Keon O'Brien</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦅</text></svg>">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
@@ -13,6 +14,10 @@
         <section id="screen1" class="screen hero">
             <div class="hero-container">
                 <video autoplay loop muted playsinline preload="auto" poster="media/keonHighlights.jpg">
+                    <!-- Wide landscape screens only ever see the middle band of this vertical clip, so they get a
+                         higher-quality center-square crop; phones (even sideways) get the full vertical video.
+                         Keep this media query in sync with heroDesktop in the script below. -->
+                    <source src="media/keonHighlights-desktop.mp4" type="video/mp4" media="(min-aspect-ratio: 1/1) and (min-width: 769px) and (min-height: 501px)">
                     <source src="media/keonHighlights.mp4" type="video/mp4">
                 </video>
                 <header class="hero-content">
@@ -42,7 +47,7 @@
                         </a>
                     </div>
                 </header>
-                <a href="#compete" class="scroll">
+                <a href="#compete" class="scroll" aria-label="Scroll down">
                     <span>SCROLL</span>
                     <img class="arrow" src="media/downarrow.svg" alt="">
                 </a>
@@ -53,7 +58,7 @@
             <div class="card2">
                 <h2 class="reveal">COMPETITION</h2>
                 <div class="compImg reveal">
-                    <img class="firstImg" src="media/flipTuck.JPEG" alt="Keon performing a flip tuck">
+                    <img class="firstImg" src="media/headshot2.jpg" alt="Keon O'Brien in his helmet at a slopestyle contest">
                     <img src="media/headshot.jpeg" alt="Keon O'Brien headshot">
                     <img class="secondImg" src="media/flipBar.jpg" alt="Keon performing a bar trick">
                 </div>
@@ -62,70 +67,77 @@
                     <div class="result-item highlight">
                         <span class="result-rank">1st</span>
                         <div class="result-details">
-                            <span class="result-event">Horseshoe Valley Slopestyle, 2024</span>
+                            <span class="result-event">Horseshoe Valley Slopestyle</span>
                             <span class="result-location">Horseshoe Valley, Ontario</span>
                         </div>
+                        <span class="result-year">2024</span>
                     </div>
                     <div class="result-item">
                         <span class="result-rank">7th</span>
                         <div class="result-details">
-                            <span class="result-event">Crankworx Summer Series, 2025</span>
+                            <span class="result-event">Crankworx Summer Series</span>
                             <span class="result-location">Horseshoe Valley, Ontario</span>
                         </div>
+                        <span class="result-year">2025</span>
                     </div>
                     <div class="result-item">
                         <span class="result-rank">7th</span>
                         <div class="result-details">
-                            <span class="result-event">Crankworx Summer Series, 2025</span>
+                            <span class="result-event">Crankworx Summer Series</span>
                             <span class="result-location">Sugar Loaf Bike Park</span>
                         </div>
+                        <span class="result-year">2025</span>
                     </div>
                     <div class="result-item">
                         <span class="result-rank">5th</span>
                         <div class="result-details">
-                            <span class="result-event">Natural Games, 2023</span>
+                            <span class="result-event">Natural Games</span>
                             <span class="result-location">Millau, France</span>
                         </div>
+                        <span class="result-year">2023</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="screen">
+        <section class="screen reels-section">
             <div class="card2">
                 <h2 class="reveal">WORLD'S FIRSTS</h2>
                 <p class="reveal">A world's first doesn't happen by accident. It's the result of vision, precision, and the kind of dedication that doesn't show up in highlight reels. These moments are built trick by trick, crash by crash—through quiet work and constant refinement. When it all lines up, it's more than just a clip. It's a new meta. <br> <br> Keon lives for this process—pushing boundaries, redefining what's possible. And he's just getting started.</p>
                 <div class="reel-row reveal">
                     <figure class="reel">
-                        <video src="media/reels/flat-drop-frontie-bar.mp4" poster="media/reels/flat-drop-frontie-bar.jpg" muted loop playsinline preload="none" aria-label="World's first: flat drop frontie bar"></video>
+                        <video src="media/reels/flat-drop-frontie-bar-reel.mp4" poster="media/reels/flat-drop-frontie-bar-reel.jpg" muted playsinline preload="none" aria-label="World's first: flat drop frontie bar"></video>
                         <button class="reel-sound" type="button" aria-label="Unmute"></button>
                     </figure>
                     <figure class="reel">
-                        <video src="media/reels/flat-drop-frontie-bar-reel.mp4" poster="media/reels/flat-drop-frontie-bar-reel.jpg" muted loop playsinline preload="none" aria-label="World's first: flat drop frontie bar"></video>
+                        <video src="media/reels/flat-drop-frontie-tuck.mp4" poster="media/reels/flat-drop-frontie-tuck.jpg" muted playsinline preload="none" aria-label="World's first: flat drop frontie tuck"></video>
                         <button class="reel-sound" type="button" aria-label="Unmute"></button>
                     </figure>
                     <figure class="reel">
-                        <video src="media/reels/flat-drop-frontie-tuck.mp4" poster="media/reels/flat-drop-frontie-tuck.jpg" muted loop playsinline preload="none" aria-label="World's first: flat drop frontie tuck"></video>
+                        <video src="media/reels/flat-drop-frontie-bar.mp4" poster="media/reels/flat-drop-frontie-bar.jpg" muted playsinline preload="none" aria-label="World's first: flat drop frontie bar"></video>
                         <button class="reel-sound" type="button" aria-label="Unmute"></button>
                     </figure>
                 </div>
             </div>
         </section>
 
-        <section id="create" class="screen">
+        <section id="create" class="screen reels-section">
             <div class="card2">
                 <h2 class="reveal">CREATE</h2>
                 <p class="reveal">From short-form edits to full brand campaigns, Keon creates riding-based content that moves. Whether it's product integration, behind-the-scenes storytelling, or raw progression clips, every piece is built to capture attention and hold it.</p>
-                <div class="reel-row reveal">
+                <div class="reel-row reveal" data-sound>
                     <figure class="reel">
-                        <video src="media/reels/dub-flip.mp4" poster="media/reels/dub-flip.jpg" muted loop playsinline preload="none" aria-label="Double flip"></video>
+                        <video src="media/reels/dub-flip.mp4" poster="media/reels/dub-flip.jpg" muted playsinline preload="none" aria-label="Double flip"></video>
                         <button class="reel-sound" type="button" aria-label="Unmute"></button>
                     </figure>
                     <figure class="reel">
-                        <video src="media/reels/dub-frontie.mp4" poster="media/reels/dub-frontie.jpg" muted loop playsinline preload="none" aria-label="Double frontflip"></video>
+                        <video src="media/reels/dub-frontie.mp4" poster="media/reels/dub-frontie.jpg" muted playsinline preload="none" aria-label="Double frontflip"></video>
                         <button class="reel-sound" type="button" aria-label="Unmute"></button>
                     </figure>
-                    <!-- TODO: third clip from Keon -->
+                    <figure class="reel">
+                        <video src="media/reels/big-bike-frontie.mp4" poster="media/reels/big-bike-frontie.jpg" muted playsinline preload="none" aria-label="Big bike frontflip"></video>
+                        <button class="reel-sound" type="button" aria-label="Unmute"></button>
+                    </figure>
                 </div>
             </div>
         </section>
@@ -133,19 +145,32 @@
         <section id="coach" class="screen">
             <div class="card2">
                 <h2 class="reveal">COACH</h2>
-                <p class="reveal">Keon coaches riders from first-time jumpers to advanced competitors. Sessions focus on jumping technique, bike control, and building the confidence to push your riding to the next level.</p>
-                <div class="coach-grid reveal">
-                    <div class="coach-item">
-                        <span class="coach-title">Jumping</span>
-                        <span class="coach-desc">Fundamentals through advanced aerial technique</span>
-                    </div>
-                    <div class="coach-item">
-                        <span class="coach-title">Bike Control</span>
-                        <span class="coach-desc">Balance, body position, and trail confidence</span>
-                    </div>
-                    <div class="coach-item">
-                        <span class="coach-title">Rider Development</span>
-                        <span class="coach-desc">Progression plans from beginner through competition</span>
+                <!-- Draft copy for sponsors: have Keon confirm the details (session types, where he coaches) -->
+                <p class="reveal">Keon teaches riders two ways: tutorials that reach riders far beyond any one park, and in-person sessions where they learn from him directly. For partners, that makes him a trusted voice on how to ride, and on what to ride.</p>
+                <div class="coach-layout reveal">
+                    <!-- Full tutorial: normal player controls, only loads when someone presses play -->
+                    <video class="tutorial" src="media/reels/frontflip-tutorial.mp4" poster="media/reels/frontflip-tutorial.jpg" controls playsinline preload="none" aria-label="Frontflip tutorial with Keon"></video>
+                    <div class="coach-modes">
+                        <article class="info-card">
+                            <span class="card-eyebrow">Online</span>
+                            <h3>Tutorials &amp; breakdowns</h3>
+                            <p>Step-by-step trick tutorials on Instagram and TikTok. Tutorials have a long shelf life: riders come back to them every session they work on a trick, with Keon's setup on screen the whole time.</p>
+                        </article>
+                        <article class="info-card">
+                            <span class="card-eyebrow">In person</span>
+                            <h3>Coaching sessions</h3>
+                            <p>Hands-on sessions with riders from first-time jumpers to aspiring competitors, where gear gets used, seen and talked about right where riders decide what to buy: at the jumps.</p>
+                            <ul class="coach-tags">
+                                <li>Jumping</li>
+                                <li>Bike control</li>
+                                <li>Rider development</li>
+                            </ul>
+                        </article>
+                        <article class="info-card">
+                            <span class="card-eyebrow">Community</span>
+                            <h3>Riding together</h3>
+                            <p>An active voice in the scene: answering riders' questions, sharing sessions and showing up where riders are. Partners get more than a logo on a jersey; they get an athlete riders trust.</p>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -154,7 +179,7 @@
         <section id="connect" class="screen">
             <div class="card2">
                 <h2 class="reveal">CONNECT</h2>
-                <p class="reveal">Keon partners with brands that align with his riding, his audience, and his vision. From product integrations to event appearances, content campaigns to long-term athlete partnerships — if you're looking for someone who brings energy, authenticity, and reach, let's talk.</p>
+                <p class="reveal">Keon partners with brands that align with his riding, his audience and his vision. He brings progression people talk about, content built to hold attention, and an audience that shows up for it.</p>
                 <div class="stats-grid reveal">
                     <div class="stat-item">
                         <span class="stat-number">550K</span>
@@ -173,6 +198,28 @@
                         <span class="stat-label">TikTok plays, last 60 days</span>
                     </div>
                 </div>
+                <div class="offer-grid reveal">
+                    <article class="info-card">
+                        <span class="card-eyebrow">Content</span>
+                        <h3>Content campaigns</h3>
+                        <p>Short-form edits and campaign content created by Keon and built for Instagram and TikTok, where his audience already watches.</p>
+                    </article>
+                    <article class="info-card">
+                        <span class="card-eyebrow">Product</span>
+                        <h3>Product integration</h3>
+                        <p>Your product in the riding, not just next to it: featured naturally in tricks, tutorials and behind-the-scenes content.</p>
+                    </article>
+                    <article class="info-card">
+                        <span class="card-eyebrow">Events</span>
+                        <h3>Event appearances</h3>
+                        <p>Contests, demos, launches and activations, with riding that draws a crowd and content that carries the event online.</p>
+                    </article>
+                    <article class="info-card">
+                        <span class="card-eyebrow">Ambassador</span>
+                        <h3>Long-term partnerships</h3>
+                        <p>Ongoing athlete partnerships that grow with his progression and his audience, season after season.</p>
+                    </article>
+                </div>
                 <div class="partners reveal">
                     <span class="partner-label">CURRENT & PAST PARTNERS</span>
                     <div class="partner-names">
@@ -185,6 +232,14 @@
                         <span>Space Brace</span>
                         <span class="partner-dot">&middot;</span>
                         <span>Yozma Sport</span>
+                    </div>
+                </div>
+                <div class="cta reveal">
+                    <h3>Let's build something together</h3>
+                    <p>Tell Keon about your brand and what you have in mind.</p>
+                    <div class="cta-actions">
+                        <a class="button button-primary" href="mailto:Keon.obrien@rogers.com?subject=Partnership%20inquiry">Email Keon</a>
+                        <a class="button button-secondary" href="tel:4167002522">Call Keon</a>
                     </div>
                 </div>
             </div>
@@ -219,40 +274,279 @@
                     revealObserver.observe(el);
                 });
 
-                // Reels play muted while on screen and pause when scrolled away
-                var reelObserver = new IntersectionObserver(function (entries) {
-                    entries.forEach(function (entry) {
-                        var video = entry.target;
-                        if (entry.isIntersecting) {
-                            video.play().catch(function () {});
-                        } else {
-                            video.pause();
+                // Reels: each row plays one clip at a time, in order, while the row is on screen.
+                // Tap a resting clip to jump to it; tap the playing clip to toggle sound.
+                // Clips start muted, except in rows marked data-sound (Create), which try to play
+                // with sound until the visitor mutes them. Browsers only allow that after the
+                // visitor has tapped/clicked the page; otherwise the clip falls back to muted.
+                var rows = [];
+                var soundRow = null; // the one row allowed to play sound
+
+                function syncAll() {
+                    rows.forEach(function (r) { r.syncSound(); });
+                }
+
+                function setupReelRow(row) {
+                    var reels = Array.prototype.slice.call(row.querySelectorAll(".reel"));
+                    var current = 0;
+                    var visible = false;
+                    var scrollTimer;
+                    var autoSound = row.hasAttribute("data-sound");
+                    var userMuted = false;
+
+                    function wantsSound() {
+                        return autoSound && !userMuted;
+                    }
+
+                    function videoAt(i) {
+                        return reels[i].querySelector("video");
+                    }
+
+                    function syncSound() {
+                        reels.forEach(function (reel, i) {
+                            var active = i === current;
+                            var soundOn = active && soundRow === row;
+                            videoAt(i).muted = !soundOn;
+                            reel.classList.toggle("active", active);
+                            reel.classList.toggle("unmuted", soundOn);
+                            reel.querySelector(".reel-sound").setAttribute("aria-label",
+                                !active ? "Play" : soundOn ? "Mute" : "Unmute");
+                        });
+                    }
+
+                    function playCurrent() {
+                        var video = videoAt(current);
+                        video.play().catch(function () {
+                            // Browsers may refuse to start a new clip with sound; fall back to muted
+                            if (!video.muted) {
+                                soundRow = null;
+                                syncAll();
+                                video.play().catch(function () {});
+                            }
+                        });
+                        // Start fetching the next clip so the hand-off is seamless
+                        videoAt((current + 1) % reels.length).preload = "auto";
+                    }
+
+                    function activate(i, scrollIntoView) {
+                        videoAt(current).pause();
+                        current = i;
+                        if (wantsSound()) {
+                            soundRow = row;
+                        } else if (soundRow === row) {
+                            soundRow = null;
                         }
+                        videoAt(i).currentTime = 0;
+                        syncAll();
+                        // On phones the row is a sideways swipe; bring the new clip into view
+                        if (scrollIntoView && row.scrollWidth > row.clientWidth) {
+                            row.scrollTo({ left: reels[i].offsetLeft - reels[0].offsetLeft, behavior: "smooth" });
+                        }
+                        if (visible) {
+                            playCurrent();
+                        }
+                    }
+
+                    reels.forEach(function (reel, i) {
+                        videoAt(i).addEventListener("ended", function () {
+                            if (i === current) {
+                                activate((i + 1) % reels.length, true);
+                            }
+                        });
+                        reel.addEventListener("click", function () {
+                            if (i !== current) {
+                                activate(i, true);
+                                return;
+                            }
+                            if (soundRow === row) {
+                                soundRow = null;
+                                userMuted = true;
+                            } else {
+                                soundRow = row;
+                                userMuted = false;
+                            }
+                            syncAll();
+                            if (visible) {
+                                playCurrent();
+                            }
+                        });
                     });
-                }, { threshold: 0.5 });
-                document.querySelectorAll(".reel video").forEach(function (video) {
-                    reelObserver.observe(video);
+
+                    // When someone swipes the row themselves, play whichever clip they landed on
+                    row.addEventListener("scroll", function () {
+                        clearTimeout(scrollTimer);
+                        scrollTimer = setTimeout(function () {
+                            var maxScroll = row.scrollWidth - row.clientWidth;
+                            var closest = current;
+                            var bestDistance = Infinity;
+                            reels.forEach(function (reel, i) {
+                                var target = Math.min(reel.offsetLeft - reels[0].offsetLeft, maxScroll);
+                                var distance = Math.abs(target - row.scrollLeft);
+                                if (distance < bestDistance) {
+                                    bestDistance = distance;
+                                    closest = i;
+                                }
+                            });
+                            if (closest !== current) {
+                                activate(closest, false);
+                            }
+                        }, 150);
+                    });
+
+                    // Start once the row is almost fully on screen; pause once it's mostly scrolled away.
+                    // (The gap between the two stops it flickering when you stop right at the edge.)
+                    new IntersectionObserver(function (entries) {
+                        var entry = entries[0];
+                        // A row taller than a short screen can never be 75% visible, so also accept
+                        // it filling most of the screen
+                        var shown = Math.max(entry.intersectionRatio,
+                            entry.intersectionRect.height / window.innerHeight);
+                        if (!visible && shown >= 0.75) {
+                            visible = true;
+                            if (wantsSound()) {
+                                soundRow = row;
+                                syncAll();
+                            }
+                            playCurrent();
+                        } else if (visible && shown < 0.25) {
+                            visible = false;
+                            videoAt(current).pause();
+                        }
+                    }, { threshold: [0, 0.25, 0.5, 0.75, 1] }).observe(row);
+
+                    syncSound();
+                    return { syncSound: syncSound };
+                }
+
+                document.querySelectorAll(".reel-row").forEach(function (row) {
+                    rows.push(setupReelRow(row));
                 });
 
-                // Tap a reel to toggle its sound; only one reel is unmuted at a time
-                document.querySelectorAll(".reel").forEach(function (reel) {
-                    var video = reel.querySelector("video");
-                    var button = reel.querySelector(".reel-sound");
-                    reel.addEventListener("click", function () {
-                        var unmute = video.muted;
-                        document.querySelectorAll(".reel").forEach(function (other) {
-                            other.querySelector("video").muted = true;
-                            other.classList.remove("unmuted");
-                            other.querySelector(".reel-sound").setAttribute("aria-label", "Unmute");
-                        });
-                        if (unmute) {
-                            video.muted = false;
-                            video.play().catch(function () {});
-                            reel.classList.add("unmuted");
-                            button.setAttribute("aria-label", "Mute");
-                        }
-                    });
+                // The browser only picks a hero <source> at page load. If the window changes shape
+                // afterwards (resize, rotation), switch files so the crop stays right, and carry on
+                // from the same moment.
+                var heroVideo = document.querySelector(".hero-container video");
+                var heroDesktop = window.matchMedia("(min-aspect-ratio: 1/1) and (min-width: 769px) and (min-height: 501px)");
+                heroDesktop.addEventListener("change", function () {
+                    var time = heroVideo.currentTime;
+                    heroVideo.src = heroDesktop.matches ? "media/keonHighlights-desktop.mp4" : "media/keonHighlights.mp4";
+                    heroVideo.addEventListener("loadedmetadata", function () {
+                        heroVideo.currentTime = time;
+                        heroVideo.play().catch(function () {});
+                    }, { once: true });
                 });
+
+                // Soft section snapping. When scrolling slows or stops with a section title just
+                // ahead (within a quarter of the screen, in the direction you were scrolling), settle
+                // with the title near the top of the screen. Anywhere else, scrolling stays free.
+                // CSS scroll-snap can't do this: its grab range is browser-defined (~1/3 screen),
+                // it pulls both ways, and it drags you back into sections taller than the screen.
+                (function () {
+                    var sections = Array.prototype.slice.call(document.querySelectorAll("section.screen"));
+                    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+                    var SLOW = 0.3; // px per ms; below this a coasting scroll is about to stop anyway
+                    var FAST = 1; // px per ms; a scroll must have been at least this fast to count as coasting
+                    var peakSpeed = 0;
+                    var lastY = window.scrollY; // where the page last came to rest
+                    var prevY = window.scrollY;
+                    var prevTime = 0;
+                    var touching = false;
+                    var snapping = false;
+                    var timer;
+
+                    // Where the page should rest for each section: its title a small gap from the top
+                    // (the hero has no title and rests at the very top)
+                    function snapPoints() {
+                        var gap = window.innerWidth <= 768 ? 24 : 40;
+                        var max = document.documentElement.scrollHeight - window.innerHeight;
+                        return sections.map(function (section) {
+                            var title = section.querySelector("h2");
+                            var y = title ? title.getBoundingClientRect().top + window.scrollY - gap
+                                          : section.getBoundingClientRect().top + window.scrollY;
+                            return Math.max(0, Math.min(max, Math.round(y)));
+                        });
+                    }
+
+                    function snapTo(y) {
+                        snapping = true;
+                        lastY = y;
+                        window.scrollTo({ top: y, behavior: reduceMotion.matches ? "auto" : "smooth" });
+                    }
+
+                    // Snap if a title lies just ahead in the direction of travel
+                    function trySnap(direction) {
+                        if (touching || snapping || direction === 0) {
+                            return false;
+                        }
+                        var y = window.scrollY;
+                        var range = window.innerHeight * 0.25;
+                        var target = null;
+                        snapPoints().forEach(function (point) {
+                            var ahead = direction > 0 ? point - y : y - point;
+                            if (ahead > 1 && ahead <= range && (target === null || ahead < Math.abs(target - y))) {
+                                target = point;
+                            }
+                        });
+                        if (target !== null) {
+                            snapTo(target);
+                            return true;
+                        }
+                        return false;
+                    }
+
+                    // Scrolling has stopped: finish any snap, or check for one
+                    function settled() {
+                        var y = window.scrollY;
+                        if (snapping) {
+                            snapping = false;
+                            lastY = y;
+                            return;
+                        }
+                        var direction = y - lastY;
+                        lastY = y;
+                        trySnap(direction);
+                    }
+
+                    window.addEventListener("scroll", function () {
+                        var now = performance.now();
+                        var y = window.scrollY;
+                        var newGesture = !prevTime || now - prevTime > 100;
+                        var speed = newGesture ? 0 : Math.abs(y - prevY) / Math.max(1, now - prevTime);
+                        var direction = y - lastY;
+                        prevY = y;
+                        prevTime = now;
+                        peakSpeed = newGesture ? 0 : Math.max(peakSpeed, speed);
+                        clearTimeout(timer);
+                        // Don't wait for a flick's slow coast to crawl to a stop: once a fast scroll
+                        // has slowed right down with a title just ahead, take over and glide to it.
+                        // (Slow, deliberate scrolling never qualifies, so it's never grabbed mid-move.)
+                        if (!newGesture && peakSpeed > FAST && speed < SLOW && trySnap(direction)) {
+                            return;
+                        }
+                        timer = setTimeout(settled, 80);
+                    }, { passive: true });
+                    window.addEventListener("touchstart", function () {
+                        touching = true;
+                    }, { passive: true });
+                    window.addEventListener("touchend", function () {
+                        touching = false;
+                        clearTimeout(timer);
+                        timer = setTimeout(settled, 80);
+                    }, { passive: true });
+
+                    // Menu and scroll-arrow links land at the same title position as snapping does
+                    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+                        var section = document.querySelector(link.getAttribute("href"));
+                        var index = sections.indexOf(section);
+                        if (index === -1) {
+                            return;
+                        }
+                        link.addEventListener("click", function (event) {
+                            event.preventDefault();
+                            snapTo(snapPoints()[index]);
+                        });
+                    });
+                })();
 
                 // Show the floating social bar only after the hero (which has its own links) scrolls away
                 var socialFloat = document.querySelector(".social-float");
